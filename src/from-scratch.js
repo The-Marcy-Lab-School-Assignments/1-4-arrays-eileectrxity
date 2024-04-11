@@ -87,8 +87,22 @@ console.log(deleteFromMiddle(testArr5)); //[1, 2, 4, 5]);
 const testArr6 = [1, 2, 3];
 console.log(deleteFromMiddle(testArr6)); //[1, 3]
 
-const isRightIndex = () => {
+//Question 6: PURE- a function that takes 3 args: an array, arr, a primitive type value, and a number, index. the function returns a boolean, true if the given value is at the index in the arr, and false otherwise. that includes false for values that aren't even in the array
+
+//using index0f() method with a for loop to return a boolean if a given array includes a given primitive value at a given index (within the array)
+const isRightIndex = (arr, value, index) => {
+  for (i = 0; i < arr.length; i++) { //iterates through each element in a given array until the end of the array
+    if (arr.indexOf(value) === index) { //assuming the value given is within the array given, checks if the index of that value is the same as the given index
+      return true; //returns the boolean true if value index and given index are the same
+    } else return false; //returns false otherwise
+  };
 };
+
+const arr = ['a', 'b', 'c', 'd', 'e'];
+console.log(isRightIndex(arr, 'a', 0)); //true
+console.log(isRightIndex(arr, 'a', 1)); //false
+console.log(isRightIndex(arr, 'WOW', 1)); //false
+console.log(isRightIndex(arr, 'A', 1)); //false
 
 const roundAllNumsDown = () => {
 };
