@@ -44,13 +44,13 @@
     },
     "Debug Tests": {
       "DeTe1": 1,
-      "DeTe2": 0
+      "DeTe2": 1
     }
   },
   "humanReadable": {
     "From Scratch Tests": "8/8",
-    "finalTestScore": "FINAL SCORE: 11/12",
+    "finalTestScore": "FINAL SCORE: 12/12",
     "Modify Tests": "2/2",
-    "Debug Tests": "1/2"
+    "Debug Tests": "2/2"
   }
 }
