@@ -35,8 +35,27 @@ const reverseString = (str) => {
 
 console.log(reverseString('hello')); // 'olleh'
 
-const newArrayFullOf = () => {
+//Question 3: PURE- a function that takes 2 args: a value of any type value and a number numOfValue. function should return a new array full of the value
+
+//using new Array and .fill() method to create a new array with a given number of empty elements, and filling in all those empty elements with a given value
+const newArrayFullOf = (val, numOfValue) => {
+  return new Array(numOfValue).fill(val); //first making a new array with numOfValue empty elements, and filling it with a given val
 };
+
+// //alt solution a: using a for loop and pushing val to a new array a given num times
+// const newArrayFullOf = (val, numOfValue) => {
+//   let newArr = []; //initializing a new array to return later
+//   for (let i = 0; i < numOfValue; i++) { //looping and iterating a given number of times
+//     newArr.push(val); //adding val to the end of the new array with each iteration for a total of num times
+//   }
+//   return newArr; //returning the new array with all values added
+// };
+
+const testArr1 = newArrayFullOf(1, 5);
+console.log(testArr1); //[1, 1, 1, 1, 1]
+
+const testArr2 = newArrayFullOf(true, 2);
+console.log(testArr2); //[true, true]
 
 const insertIntoMiddle = () => {
 };
