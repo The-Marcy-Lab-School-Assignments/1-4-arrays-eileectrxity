@@ -57,8 +57,20 @@ console.log(testArr1); //[1, 1, 1, 1, 1]
 const testArr2 = newArrayFullOf(true, 2);
 console.log(testArr2); //[true, true]
 
-const insertIntoMiddle = () => {
+//Question 4: SIDE EFFECT- a function that takes 2 args: an array, arr and a value of any type, value. function should find the middle index of the array and then insert the value there. the function is mutational so it returns nothing. check the tests to see exactly which index should be the "middle." don't overthink it!
+
+//using .splice() and Math.floor method
+const insertIntoMiddle = (arr, value) => {
+  let middle = Math.floor(arr.length / 2); //getting the middle index of a given array by halving the array length and rounding it down to get the left most middle index if the array length is even
+  arr.splice(middle, 0, value); //at the middle index, deletes 0 elements and adds the given value before/to the left of the middle index
+  // console.log(arr.splice(median, 0, value)) //to help me see what's happening: returns the array of the deleted elements
+  // return arr; //to help me see what's happening: returns the actual mutated array
 };
+
+const testArr3 = [1, 2, 3, 4, 5, 6];
+console.log(insertIntoMiddle(testArr3, 7)); //[1, 2, 3, 7, 4, 5, 6]);
+const testArr4 = [1, 2, 3];
+console.log(insertIntoMiddle(testArr4, 0)); //[1, 0, 2, 3]
 
 const deleteFromMiddle = () => {
 };
