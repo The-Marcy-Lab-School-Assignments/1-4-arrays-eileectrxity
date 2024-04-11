@@ -127,8 +127,36 @@ console.log(roundAllNumsDown(testArr7)); //[1, 2, 3]
 const testArr8 = [5.9, -7.9, 12.9];
 console.log(roundAllNumsDown(testArr8)); //[5, -8, 12]
 
-const getAllYCoordinates = () => {
+/*Question 8: PURE- a function that takes an array of coordinate pairs, arrOfCoords. function should return a new array full of only the y coordinates (that is the second value in the coordinate arrays). like this:
+// [x, y]
+getAllYCoordinates([[1, 2], [3, 4], [5, 6]])
+// [2, 4, 6]
+
+// [x, y, z]
+getAllYCoordinates([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+// [2, 5, 8]
+*/
+
+//using .map() method to return a new array of just the elements at index 1 of each nested array from the given array
+const getAllYCoordinates = (arrOfCoords) => {
+  return arrOfCoords.map(yCoords => yCoords[1]) //for each nested array aka element pair of arrOfCoords, get the y coordinate at element 1 of each pair
 };
+
+// //alt solution a: using a nested for loop and .push() method to return a new array, storing the manually added elements at index 1 of each nested array
+// const getAllYCoordinates = (arrOfCoords) => {
+//   let yCords = []; //initializing an empty array to push y coordinates to
+//   for (let i = 0; i < arrOfCoords.length; i++) { //iterating through all array pair elements 
+//     for (let j = 0; j < arrOfCoords[j].length; j++) { //iterating inside each nested array's element (where arrofCoords[j].length is the length of a single nested array)
+//       if (j === 1) { //if the nested array's element index is 1
+//         yCords.push(arrOfCoords[i][j]); //push element at [i][1] to the new array (where [i][j] references an element inside of the nested array)
+//       };
+//     };
+//   }
+//     return yCords; //an array of all the y coordinates (each nested array's element at index 1)
+// };
+
+console.log(getAllYCoordinates([[1, 2], [3, 4], [5, 6]])); //[2, 4, 6]
+console.log(getAllYCoordinates([[1, 2, 3], [4, 5, 6], [7, 8, 9]])); // [2, 5, 8]
 
 module.exports = {
   addToFrontOrBack,

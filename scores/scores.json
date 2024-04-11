@@ -36,7 +36,7 @@
       "FrScTe5": 1,
       "FrScTe6": 1,
       "FrScTe7": 1,
-      "FrScTe8": 0
+      "FrScTe8": 1
     },
     "Modify Tests": {
       "MoTe1": 0,
@@ -48,8 +48,8 @@
     }
   },
   "humanReadable": {
-    "From Scratch Tests": "7/8",
-    "finalTestScore": "FINAL SCORE: 7/12",
+    "From Scratch Tests": "8/8",
+    "finalTestScore": "FINAL SCORE: 8/12",
     "Modify Tests": "0/2",
     "Debug Tests": "0/2"
   }
