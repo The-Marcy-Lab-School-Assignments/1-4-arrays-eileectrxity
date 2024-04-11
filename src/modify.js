@@ -1,4 +1,4 @@
-//improve this static function that takes 3 words, upper cases them, and then returns them in an array. only works with 3 parameters right now; read the docs for the rest operator to improve this function. remember, we will never pass in an array as an argument, only individual word arguments
+//Question 9: improve this static function that takes 3 words, upper cases them, and then returns them in an array. only works with 3 parameters right now; read the docs for the rest operator to improve this function. remember, we will never pass in an array as an argument, only individual word arguments
 // original function
 // const uppercaseAll = (word1, word2, word3) => {
 //   return [
@@ -26,7 +26,7 @@ const uppercaseAll = (...word) => { //represent an infinite number of arguments 
 
 console.log(uppercaseAll('hi', 'there')); //["HI", "THERE"]
 
-// a function that takes a single coordinate array ([x,y]) and then returns a template string with them in it. it's not using modern destructuring syntax though and that's lame. modify this function to use destructuring but keep the variable names x and y (our tests are explicitly looking for those)
+//Question 10: a function that takes a single coordinate array ([x,y]) and then returns a template string with them in it. it's not using modern destructuring syntax though and that's lame. modify this function to use destructuring but keep the variable names x and y (our tests are explicitly looking for those)
 //original function
 // const destructureCoordinates = (coordinates) => {
 //   const x = coordinates[0];
