@@ -72,8 +72,20 @@ console.log(insertIntoMiddle(testArr3, 7)); //[1, 2, 3, 7, 4, 5, 6]);
 const testArr4 = [1, 2, 3];
 console.log(insertIntoMiddle(testArr4, 0)); //[1, 0, 2, 3]
 
-const deleteFromMiddle = () => {
+//Question 5: SIDE EFFECT- a function that takes an array, arr. function should delete whatever value is in the middle index of the array. function is mutational so it returns nothing. check the tests to see exactly which index should be the "middle." don't overthink it!
+
+//using splice() method; nearly identical to the insertIntoMiddle function just before this. deletes an element from a given array at the middle index
+const deleteFromMiddle = (arr) => {
+  let middle = Math.floor(arr.length / 2); //get the middle and round it down so that we get the left most middle index
+  arr.splice(middle, 1); //deletes 1 element from the middle index
+  // console.log(arr.splice(median, 0, value)) //to help me see what's happening: returns the array of the deleted elements
+  // return arr; //to help me see what's happening: returns the actual mutated array
 };
+
+const testArr5 = [1, 2, 3, 4, 5];
+console.log(deleteFromMiddle(testArr5)); //[1, 2, 4, 5]);
+const testArr6 = [1, 2, 3];
+console.log(deleteFromMiddle(testArr6)); //[1, 3]
 
 const isRightIndex = () => {
 };
