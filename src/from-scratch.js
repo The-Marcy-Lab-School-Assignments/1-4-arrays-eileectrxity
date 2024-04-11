@@ -104,8 +104,28 @@ console.log(isRightIndex(arr, 'a', 1)); //false
 console.log(isRightIndex(arr, 'WOW', 1)); //false
 console.log(isRightIndex(arr, 'A', 1)); //false
 
-const roundAllNumsDown = () => {
+//Question 7: PURE- a function that takes an array of numbers, arr. function should return a new array full of arrs numbers rounded down. original arr numbers should not be modified in any way
+
+//using map() method to create a new array with each element rounded down
+const roundAllNumsDown = (arr) => {
+  const newArr = arr.map(Math.floor); //map() intentionally iterates through each element, passing each element in arr to the argument inside it (argument being Math.floor in this case) --> so no need to specify by coding Math.floor(arr[i])
+  return newArr;
 };
+
+// //alt solution a: using a for loop to manually round down each number in a given array and add it to a new array
+// const roundAllNumsDown = (arr) => {
+//   let newArr = []; //initializing an empty array to store rounded values in later
+//   for (let i = 0; i < arr.length; i++) { //iterating through each value in a given array
+//     const number = Math.floor(arr[i]); //rounding down the value at current index i (Math.floor has to be stored inside a variable to work)
+//     newArr.push(number); //pushing that rounded down value to the end of the new array with each iteration
+//   };
+//   return newArr; //getting the new array with all values rounded down
+// };
+
+const testArr7 = [1.1, 2.2, 3.3];
+console.log(roundAllNumsDown(testArr7)); //[1, 2, 3]
+const testArr8 = [5.9, -7.9, 12.9];
+console.log(roundAllNumsDown(testArr8)); //[5, -8, 12]
 
 const getAllYCoordinates = () => {
 };
